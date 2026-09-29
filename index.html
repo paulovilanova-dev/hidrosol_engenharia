@@ -1,0 +1,1444 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hidrosol Engenharia | Água para todos, soluções inteligentes</title>
+  <meta name="description" content="Engenharia Hídrica & Soluções Sustentáveis. Projetos de alta precisão para captação, tratamento e distribuição inteligente de água para indústrias, municípios e agronegócio.">
+  <meta name="keywords" content="engenharia hídrica, tratamento de água, ETA, ETE, adutoras, telemetria IoT, reúso de efluentes, outorga, saneamento">
+  <meta name="author" content="Hidrosol Engenharia">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="logo.png">
+
+  <!-- Google Fonts: Montserrat (800, 700, 600, 500) e Open Sans (400, 600) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;0,700;0,800;1,500;1,800&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            hidro: {
+              primary: '#0066A1',   /* Confiança & Recursos Hídricos */
+              dark: '#003B5C',      /* Engenharia & Segurança */
+              light: '#39A9DB',     /* Tecnologia & Inovação */
+              gray: '#667085',      /* Cinza Técnico */
+              surface: '#F8FAFC'    /* Fundo Neutro Técnico */
+            }
+          },
+          fontFamily: {
+            heading: ['Montserrat', 'sans-serif'],
+            sans: ['Open Sans', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Estilos Customizados & Design System -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-white text-slate-800 antialiased selection:bg-[#39A9DB] selection:text-white">
+
+  <!-- =========================================================================
+       1. HEADER / BARRA DE NAVEGAÇÃO FIXA
+       ========================================================================= -->
+  <header id="main-header" class="fixed top-0 left-0 w-full z-50 bg-white transition-all duration-300 border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo Oficial Hidrosol -->
+        <a href="#hero" class="flex items-center gap-3 group" aria-label="Hidrosol Engenharia - Página Inicial">
+          <div class="w-12 h-12 rounded-xl overflow-hidden shadow-sm flex items-center justify-center bg-white border border-slate-100 p-0.5 group-hover:border-[#39A9DB] transition-colors">
+            <img src="logo.png" alt="Logotipo Hidrosol Engenharia" class="w-full h-full object-contain">
+          </div>
+          <div class="flex flex-col">
+            <span class="font-heading font-extrabold text-xl sm:text-2xl tracking-tight text-[#003B5C] leading-none">
+              HIDROSOL
+            </span>
+            <span class="text-[10px] tracking-[0.25em] font-semibold text-[#0066A1] uppercase mt-0.5">
+              Engenharia
+            </span>
+            <span class="hidden sm:inline-block text-[9px] text-[#667085] font-medium tracking-wide">
+              água para todos, soluções inteligentes
+            </span>
+          </div>
+        </a>
+
+        <!-- Menu Desktop -->
+        <nav class="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-semibold text-slate-700">
+          <a href="#hero" class="nav-link hover:text-[#0066A1] transition-colors py-1 border-b-2 border-transparent hover:border-[#0066A1]">Início</a>
+          <a href="#sobre" class="nav-link hover:text-[#0066A1] transition-colors py-1 border-b-2 border-transparent hover:border-[#0066A1]">Sobre Nós</a>
+          <a href="#solucoes" class="nav-link hover:text-[#0066A1] transition-colors py-1 border-b-2 border-transparent hover:border-[#0066A1]">Soluções</a>
+          <a href="#diferenciais" class="nav-link hover:text-[#0066A1] transition-colors py-1 border-b-2 border-transparent hover:border-[#0066A1]">Diferenciais</a>
+          <a href="#metodologia" class="nav-link hover:text-[#0066A1] transition-colors py-1 border-b-2 border-transparent hover:border-[#0066A1]">Metodologia</a>
+          <a href="#segmentos" class="nav-link hover:text-[#0066A1] transition-colors py-1 border-b-2 border-transparent hover:border-[#0066A1]">Segmentos</a>
+          <a href="#contato" class="nav-link hover:text-[#0066A1] transition-colors py-1 border-b-2 border-transparent hover:border-[#0066A1]">Contato</a>
+        </nav>
+
+        <!-- CTA Principal no Header -->
+        <div class="hidden lg:flex items-center gap-3">
+          <a href="#contato" class="btn-primary text-xs uppercase tracking-wider font-bold px-5 py-2.5 rounded-full inline-flex items-center gap-2">
+            <span>Solicite um Orçamento Técnico</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Botão Mobile Menu Toggle -->
+        <button id="mobile-menu-btn" type="button" class="md:hidden p-2 rounded-lg text-slate-700 hover:text-[#0066A1] hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-[#0066A1]" aria-label="Abrir Menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- Gaveta Menu Mobile -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-3 pb-6 shadow-xl animate-on-scroll is-visible">
+      <div class="flex flex-col space-y-3 font-semibold text-slate-800 text-base">
+        <a href="#hero" class="nav-link px-3 py-2 rounded-md hover:bg-slate-50 hover:text-[#0066A1]">Início</a>
+        <a href="#sobre" class="nav-link px-3 py-2 rounded-md hover:bg-slate-50 hover:text-[#0066A1]">Sobre Nós</a>
+        <a href="#solucoes" class="nav-link px-3 py-2 rounded-md hover:bg-slate-50 hover:text-[#0066A1]">Soluções</a>
+        <a href="#diferenciais" class="nav-link px-3 py-2 rounded-md hover:bg-slate-50 hover:text-[#0066A1]">Diferenciais</a>
+        <a href="#metodologia" class="nav-link px-3 py-2 rounded-md hover:bg-slate-50 hover:text-[#0066A1]">Metodologia</a>
+        <a href="#segmentos" class="nav-link px-3 py-2 rounded-md hover:bg-slate-50 hover:text-[#0066A1]">Segmentos</a>
+        <a href="#contato" class="nav-link px-3 py-2 rounded-md hover:bg-slate-50 hover:text-[#0066A1]">Contato</a>
+        <div class="pt-2 border-t border-slate-100">
+          <a href="#contato" class="btn-primary w-full text-center text-xs uppercase tracking-wider font-bold py-3 rounded-xl block">
+            Solicite um Orçamento Técnico
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       2. HERO SECTION (DESTAQUE PRINCIPAL & CONCEPT)
+       ========================================================================= -->
+  <section id="hero" class="relative pt-28 pb-20 md:pt-36 md:pb-28 overflow-hidden bg-blueprint">
+    
+    <!-- Linhas Técnicas de Circuito / Blueprint e Elementos Vetoriais Decorativos -->
+    <div class="absolute inset-0 pointer-events-none opacity-30">
+      <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="grid-pattern" width="60" height="60" patternUnits="userSpaceOnUse">
+            <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#39A9DB" stroke-width="0.75" opacity="0.35"/>
+            <circle cx="60" cy="0" r="2" fill="#39A9DB" opacity="0.5"/>
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#grid-pattern)" />
+      </svg>
+    </div>
+
+    <!-- Efeito de Iluminação Focal Azul Hidrosol -->
+    <div class="absolute top-1/4 -left-48 w-96 h-96 bg-[#0066A1] rounded-full filter blur-3xl opacity-30 pointer-events-none"></div>
+    <div class="absolute bottom-10 right-0 w-[500px] h-[500px] bg-[#39A9DB] rounded-full filter blur-3xl opacity-20 pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Coluna de Conteúdo Hero -->
+        <div class="lg:col-span-7 space-y-6">
+          
+          <!-- Badge Institucional -->
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-[#39A9DB]/40 backdrop-blur-md">
+            <span class="telemetry-pulse"></span>
+            <span class="text-xs sm:text-sm font-semibold text-[#39A9DB] tracking-wide">
+              Tecnologia que Flui. Engenharia que Transforma.
+            </span>
+          </div>
+
+          <!-- H1 Montserrat ExtraBold -->
+          <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight">
+            Engenharia Hídrica & <br class="hidden sm:inline">
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#39A9DB] to-white">
+              Soluções Sustentáveis
+            </span>
+          </h1>
+
+          <!-- Subtítulo Montserrat Medium -->
+          <p class="font-subtitle text-base sm:text-lg md:text-xl text-slate-200 max-w-2xl leading-relaxed">
+            Transforme recursos hídricos em resultados eficientes. Projetos de alta precisão para captação, tratamento e distribuição inteligente de água para indústrias, municípios e agronegócio.
+          </p>
+
+          <!-- Proposta de Valor Destacada -->
+          <div class="p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
+            <p class="text-xs sm:text-sm text-slate-300 italic flex items-center gap-2">
+              <svg class="w-5 h-5 text-[#39A9DB] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+              </svg>
+              <span>"Transformamos desafios complexos da água em eficiência operacional e preservação ambiental através de engenharia hídrica de alta precisão."</span>
+            </p>
+          </div>
+
+          <!-- Ações e Botões de Conversão -->
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <a href="#contato" class="btn-primary font-bold text-sm sm:text-base px-7 py-3.5 rounded-full inline-flex items-center gap-3">
+              <span>Solicite um Orçamento Técnico</span>
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+              </svg>
+            </a>
+
+            <a href="#solucoes" class="btn-secondary font-bold text-sm sm:text-base px-7 py-3.5 rounded-full inline-flex items-center gap-2">
+              <span>Conheça nossas Soluções</span>
+            </a>
+
+            <!-- Botão Assistir Vídeo Oficial -->
+            <button type="button" class="open-video-btn inline-flex items-center gap-2 text-slate-200 hover:text-white text-sm font-semibold transition-colors px-3 py-2 rounded-lg hover:bg-white/5">
+              <span class="w-9 h-9 rounded-full bg-[#39A9DB]/20 border border-[#39A9DB] flex items-center justify-center text-[#39A9DB]">
+                <svg class="w-4 h-4 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </span>
+              <span>Assistir Vídeo (1 min)</span>
+            </button>
+          </div>
+
+          <!-- Slogan Institucional -->
+          <div class="flex items-center gap-3 pt-2 text-xs font-semibold text-slate-300">
+            <span class="w-2 h-2 rounded-full bg-[#39A9DB]"></span>
+            <span>Slogan: "Água para todos, soluções inteligentes."</span>
+          </div>
+
+        </div>
+
+        <!-- Coluna Visual / Composição Técnica da ETA com Telemetria -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative rounded-2xl overflow-hidden border border-[#39A9DB]/30 shadow-2xl bg-[#00263B] group">
+            
+            <!-- Imagem Técnica ou Render da Estação de Tratamento (ETA) -->
+            <div class="relative h-80 sm:h-96 w-full overflow-hidden">
+              <img src="hero_mockup.jpg" alt="Estação de Tratamento de Água - Hidrosol Engenharia" class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700 opacity-90">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#003B5C] via-transparent to-transparent"></div>
+            </div>
+
+            <!-- Card Flutuante 1: Telemetria em Tempo Real -->
+            <div class="absolute top-4 left-4 glass-panel-dark px-3.5 py-2.5 rounded-xl border border-[#39A9DB]/30 flex items-center gap-3 shadow-lg">
+              <span class="telemetry-pulse"></span>
+              <div>
+                <p class="text-[10px] text-slate-300 uppercase tracking-wider font-semibold">Telemetria IoT Ativa</p>
+                <p class="text-xs font-bold text-white">Vazão: 120.4 m³/h • Pressão: 4.2 bar</p>
+              </div>
+            </div>
+
+            <!-- Card Flutuante 2: Eficiência e Qualidade -->
+            <div class="absolute bottom-4 right-4 glass-panel-dark px-3.5 py-2.5 rounded-xl border border-[#39A9DB]/30 flex items-center gap-3 shadow-lg">
+              <div class="w-8 h-8 rounded-lg bg-[#0066A1]/40 flex items-center justify-center text-[#39A9DB]">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+              <div>
+                <p class="text-[10px] text-slate-300 uppercase tracking-wider font-semibold">Portaria GM/MS 888</p>
+                <p class="text-xs font-bold text-[#39A9DB]">100% Padrão Potabilidade</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- =======================================================================
+           CARDS DE DESTAQUE HERO (CONCEITO DA MARCA: GOTA + MALHA + ENGENHARIA)
+           ======================================================================= -->
+      <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Card 1: Gestão Eficiente de Recursos -->
+        <div class="glass-panel p-6 rounded-2xl shadow-xl hover:-translate-y-1 transition-all duration-300 border-t-4 border-t-[#0066A1]">
+          <div class="w-14 h-14 rounded-2xl bg-blue-50 text-[#0066A1] flex items-center justify-center mb-4 shadow-inner">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-[#003B5C] mb-2 uppercase tracking-tight">
+            Gestão Eficiente de Recursos
+          </h3>
+          <p class="text-sm text-[#667085] leading-relaxed">
+            Eliminação ativa de desperdícios, redução de faturas hídricas e proteção de mananciais através de engenharia hidráulica aplicada.
+          </p>
+        </div>
+
+        <!-- Card 2: Sistemas Hidráulicos Modernos -->
+        <div class="glass-panel p-6 rounded-2xl shadow-xl hover:-translate-y-1 transition-all duration-300 border-t-4 border-t-[#39A9DB]">
+          <div class="w-14 h-14 rounded-2xl bg-sky-50 text-[#39A9DB] flex items-center justify-center mb-4 shadow-inner">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-[#003B5C] mb-2 uppercase tracking-tight">
+            Sistemas Hidráulicos Modernos
+          </h3>
+          <p class="text-sm text-[#667085] leading-relaxed">
+            Adutoras, reservatórios e redes de distribuição projetados com modelagem computacional para controle preciso de fluxo e pressão.
+          </p>
+        </div>
+
+        <!-- Card 3: Engenharia Sustentável -->
+        <div class="glass-panel p-6 rounded-2xl shadow-xl hover:-translate-y-1 transition-all duration-300 border-t-4 border-t-[#003B5C]">
+          <div class="w-14 h-14 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-4 shadow-inner">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-[#003B5C] mb-2 uppercase tracking-tight">
+            Engenharia Sustentável
+          </h3>
+          <p class="text-sm text-[#667085] leading-relaxed">
+            Ciclo fechado de tratamento, reúso de efluentes sanitários/industriais e conformidade integral com metas ESG e órgãos ambientais.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       3. FAIXA DE IMPACTO / MÉTRICAS DE DESEMPENHO (COUNTERS ANIMADOS)
+       ========================================================================= -->
+  <section id="metricas" class="py-16 bg-[#003B5C] border-y border-[#39A9DB]/20 relative overflow-hidden">
+    <!-- Linhas de fluxo de água decorativas no fundo -->
+    <div class="absolute inset-0 opacity-10 pointer-events-none">
+      <svg class="w-full h-full" preserveAspectRatio="none" viewBox="0 0 1200 200" fill="none">
+        <path d="M0,100 C300,160 600,40 900,100 C1050,130 1150,80 1200,90" stroke="#39A9DB" stroke-width="4"/>
+        <path d="M0,130 C200,70 500,170 800,110 C1000,70 1100,120 1200,110" stroke="#FFFFFF" stroke-width="2"/>
+      </svg>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center mb-10">
+        <span class="badge-tech-dark mb-2">Impacto Real Comprovado</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white">
+          Eficiência Operacional Medida em Números
+        </h2>
+        <p class="text-slate-300 text-sm max-w-xl mx-auto mt-2">
+          Nossos projetos combinam modelagem matemática e automação contínua para entregar resultados econômicos e ecológicos mensuráveis.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Métrica 1: +40% Redução de Custos -->
+        <div class="bg-white/5 border border-white/10 backdrop-blur-md rounded-2xl p-6 text-center hover:bg-white/10 transition-colors">
+          <div class="text-3xl mb-2">📈</div>
+          <div class="text-4xl sm:text-5xl font-extrabold text-[#39A9DB] tracking-tight font-heading">
+            <span class="counter-value" data-target="40" data-prefix="+" data-suffix="%">+0%</span>
+          </div>
+          <h3 class="text-base font-bold text-white mt-2">Redução em Custos</h3>
+          <p class="text-xs text-slate-300 mt-1">
+            Economia direta na fatura hídrica e otimização de custos operacionais com água de reúso e poços.
+          </p>
+        </div>
+
+        <!-- Métrica 2: 98% Eficiência -->
+        <div class="bg-white/5 border border-white/10 backdrop-blur-md rounded-2xl p-6 text-center hover:bg-white/10 transition-colors">
+          <div class="text-3xl mb-2">💧</div>
+          <div class="text-4xl sm:text-5xl font-extrabold text-white tracking-tight font-heading">
+            <span class="counter-value" data-target="98" data-prefix="" data-suffix="%">0%</span>
+          </div>
+          <h3 class="text-base font-bold text-white mt-2">Eficiência de Tratamento</h3>
+          <p class="text-xs text-slate-300 mt-1">
+            Índice de purificação de água em ETAs e despoluição de efluentes industriais/sanitários em ETEs.
+          </p>
+        </div>
+
+        <!-- Métrica 3: 3% Perda Hídrica -->
+        <div class="bg-white/5 border border-white/10 backdrop-blur-md rounded-2xl p-6 text-center hover:bg-white/10 transition-colors">
+          <div class="text-3xl mb-2">🛠️</div>
+          <div class="text-4xl sm:text-5xl font-extrabold text-[#39A9DB] tracking-tight font-heading">
+            <span class="counter-value" data-target="3" data-prefix="" data-suffix="%">0%</span>
+          </div>
+          <h3 class="text-base font-bold text-white mt-2">Taxa de Perda Hídrica</h3>
+          <p class="text-xs text-slate-300 mt-1">
+            Em redes gerenciadas pela Hidrosol — contra a média nacional de 40% de perdas no abastecimento.
+          </p>
+        </div>
+
+        <!-- Métrica 4: 100% Conformidade -->
+        <div class="bg-white/5 border border-white/10 backdrop-blur-md rounded-2xl p-6 text-center hover:bg-white/10 transition-colors">
+          <div class="text-3xl mb-2">🛡️</div>
+          <div class="text-4xl sm:text-5xl font-extrabold text-white tracking-tight font-heading">
+            <span class="counter-value" data-target="100" data-prefix="" data-suffix="%">0%</span>
+          </div>
+          <h3 class="text-base font-bold text-white mt-2">Conformidade Legal</h3>
+          <p class="text-xs text-slate-300 mt-1">
+            Aprovação em órgãos ambientais, outorgas hídricas homologadas e normas ABNT/CONAMA/MS 888.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SEÇÃO INSTITUCIONAL: SOBRE NÓS / QUEM SOMOS
+       ========================================================================= -->
+  <section id="sobre" class="py-24 bg-white relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Coluna Esquerda: Texto Institucional & Pilares -->
+        <div class="lg:col-span-7 space-y-6 animate-on-scroll">
+          <span class="badge-tech">Excelência & Rigor Técnico</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-[#003B5C] tracking-tight">
+            Engenharia Hídrica de Alta Precisão para o Brasil do Futuro
+          </h2>
+          <p class="text-base sm:text-lg font-medium text-[#0066A1]">
+            "Tecnologia que Flui. Engenharia que Transforma."
+          </p>
+          <p class="text-sm sm:text-base text-[#667085] leading-relaxed">
+            A <strong>Hidrosol Engenharia</strong> é uma empresa especializada no desenvolvimento de projetos integrados para captação, potabilização, tratamento, adução e reúso estratégico de recursos hídricos. Atendemos indústrias de manufatura, cooperativas do agronegócio, loteamentos, municípios e grandes condomínios.
+          </p>
+          <p class="text-sm text-[#667085] leading-relaxed">
+            Nossa abordagem elimina o desperdício tradicional por meio de <em>modelagem hidráulica computacional</em>, automação em tempo real via telemetria IoT e ciclo fechado de efluentes, garantindo máxima eficiência energética e conformidade irrestrita com normas ambientais e outorgas.
+          </p>
+
+          <!-- Três Pilares Oficiais -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+              <div class="w-8 h-8 rounded-lg bg-blue-100 text-[#0066A1] flex items-center justify-center font-bold text-sm mb-2">01</div>
+              <h4 class="text-xs font-bold text-[#003B5C] uppercase tracking-wider mb-1">Engenharia Sob Medida</h4>
+              <p class="text-[11px] text-slate-600">Projetos calculados para a demanda real e qualidade específica do seu manancial.</p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+              <div class="w-8 h-8 rounded-lg bg-sky-100 text-[#0066A1] flex items-center justify-center font-bold text-sm mb-2">02</div>
+              <h4 class="text-xs font-bold text-[#003B5C] uppercase tracking-wider mb-1">Telemetria 24/7</h4>
+              <p class="text-[11px] text-slate-600">Painéis em nuvem com sensores industriais e alarmes preventivos em tempo real.</p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+              <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-sm mb-2">03</div>
+              <h4 class="text-xs font-bold text-[#003B5C] uppercase tracking-wider mb-1">Compromisso ESG</h4>
+              <p class="text-[11px] text-slate-600">Reúso e proteção hídrica gerando valor econômico sustentável.</p>
+            </div>
+          </div>
+
+          <div class="pt-2 flex items-center gap-4">
+            <a href="#solucoes" class="btn-primary text-xs uppercase tracking-wider font-bold px-6 py-3 rounded-full inline-flex items-center gap-2">
+              <span>Conheça Nossas Soluções</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+              </svg>
+            </a>
+            <a href="#contato" class="text-xs font-bold text-[#003B5C] hover:text-[#0066A1] uppercase tracking-wider">
+              Fale com a Diretoria Técnica →
+            </a>
+          </div>
+        </div>
+
+        <!-- Coluna Direita: Box de Credenciais e Imagem Conceitual -->
+        <div class="lg:col-span-5 animate-on-scroll">
+          <div class="bg-gradient-to-br from-[#003B5C] to-[#002235] text-white rounded-3xl p-8 sm:p-10 shadow-2xl border border-[#39A9DB]/30 relative overflow-hidden">
+            <div class="absolute -top-16 -right-16 w-48 h-48 bg-[#39A9DB]/10 rounded-full blur-2xl"></div>
+
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-12 h-12 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center p-1">
+                <img src="logo.png" alt="Hidrosol" class="w-full h-full object-contain">
+              </div>
+              <div>
+                <span class="font-heading font-extrabold text-xl text-white">HIDROSOL ENGENHARIA</span>
+                <span class="text-xs text-[#39A9DB] block tracking-wider">Soluções Hídricas Inteligentes</span>
+              </div>
+            </div>
+
+            <div class="space-y-4 text-xs text-slate-300">
+              <div class="flex items-start gap-3 p-3 rounded-xl bg-white/5 border border-white/10">
+                <span class="text-base text-emerald-400">✔</span>
+                <div>
+                  <strong class="text-white block text-sm">Registro CREA Ativo</strong>
+                  Projetos com responsabilidade técnica formal e ART assinada por engenheiros credenciados.
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3 p-3 rounded-xl bg-white/5 border border-white/10">
+                <span class="text-base text-emerald-400">✔</span>
+                <div>
+                  <strong class="text-white block text-sm">Normas ABNT & Ministério da Saúde</strong>
+                  Conformidade integral com NBR 12216, NBR 12217 e Portaria GM/MS nº 888.
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3 p-3 rounded-xl bg-white/5 border border-white/10">
+                <span class="text-base text-emerald-400">✔</span>
+                <div>
+                  <strong class="text-white block text-sm">Estrutura Turnkey Completa</strong>
+                  Do estudo hidrogeológico preliminar até a operação assistida da planta.
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-6 pt-6 border-t border-white/10 flex items-center justify-between text-xs">
+              <span class="text-slate-400">Atendimento Técnico:</span>
+              <span class="text-[#39A9DB] font-bold">Brasil (Todos os Estados)</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       4. ÁREAS DE ATUAÇÃO & SOLUÇÕES ESPECIALIZADAS
+       ========================================================================= -->
+  <section id="solucoes" class="py-24 bg-blueprint-light">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
+        <span class="badge-tech mb-3">Portfólio de Engenharia</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-[#003B5C] tracking-tight">
+          Áreas de Atuação & Soluções Especializadas
+        </h2>
+        <p class="mt-4 text-base text-[#667085] leading-relaxed">
+          Engenharia de precisão para todo o ciclo hidrológico. Da concepção matemática do projeto até a operação automatizada com telemetria inteligente.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Solução 1: Estações de Tratamento (ETA e ETE) -->
+        <div class="tech-card p-8 flex flex-col justify-between animate-on-scroll">
+          <div>
+            <div class="w-14 h-14 rounded-xl bg-blue-50 text-[#0066A1] flex items-center justify-center mb-6 shadow-sm border border-blue-100">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+              </svg>
+            </div>
+            <span class="text-xs font-bold uppercase tracking-wider text-[#0066A1]">Saneamento & Processos</span>
+            <h3 class="text-xl font-bold text-[#003B5C] mt-1 mb-3">
+              Estações de Tratamento (ETA e ETE)
+            </h3>
+            <p class="text-sm text-[#667085] leading-relaxed mb-6">
+              Projetos e montagem de estações compactas modulares e industriais de grande porte. Plantas turnkey para potabilização e tratamento de efluentes complexos.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">Compactas Skid</span>
+              <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">FAD / MBR</span>
+              <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">Portaria MS 888</span>
+            </div>
+          </div>
+          <button type="button" class="open-sol-modal text-sm font-bold text-[#0066A1] hover:text-[#003B5C] inline-flex items-center gap-2 group" data-solution="eta">
+            <span>Ver Especificação Técnica</span>
+            <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Solução 2: Sistemas de Abastecimento e Adutoras -->
+        <div class="tech-card p-8 flex flex-col justify-between animate-on-scroll">
+          <div>
+            <div class="w-14 h-14 rounded-xl bg-sky-50 text-[#39A9DB] flex items-center justify-center mb-6 shadow-sm border border-sky-100">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+              </svg>
+            </div>
+            <span class="text-xs font-bold uppercase tracking-wider text-[#39A9DB]">Distribuição & Hidráulica</span>
+            <h3 class="text-xl font-bold text-[#003B5C] mt-1 mb-3">
+              Sistemas de Abastecimento e Adutoras
+            </h3>
+            <p class="text-sm text-[#667085] leading-relaxed mb-6">
+              Dimensionamento técnico preciso de redes de distribuição, reservatórios elevados/apoiados, estações elevatórias e perfuração de poços artesianos profundos.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">Modelagem EPANET</span>
+              <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">VRPs Inteligentes</span>
+              <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">Poços Tubulares</span>
+            </div>
+          </div>
+          <button type="button" class="open-sol-modal text-sm font-bold text-[#0066A1] hover:text-[#003B5C] inline-flex items-center gap-2 group" data-solution="adutoras">
+            <span>Ver Especificação Técnica</span>
+            <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Solução 3: Gestão & Reúso de Efluentes -->
+        <div class="tech-card p-8 flex flex-col justify-between animate-on-scroll">
+          <div>
+            <div class="w-14 h-14 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-6 shadow-sm border border-emerald-100">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+              </svg>
+            </div>
+            <span class="text-xs font-bold uppercase tracking-wider text-emerald-600">Economia Circular ESG</span>
+            <h3 class="text-xl font-bold text-[#003B5C] mt-1 mb-3">
+              Gestão & Reúso de Efluentes
+            </h3>
+            <p class="text-sm text-[#667085] leading-relaxed mb-6">
+              Reúso de águas cinzas, reaproveitamento de água de chuva em grande escala e tecnologias limpas para torres de resfriamento, caldeiras e lavagens técnicas.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">Ciclo Fechado</span>
+              <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">Desinfecção UV / Ozônio</span>
+              <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">Meta ESG</span>
+            </div>
+          </div>
+          <button type="button" class="open-sol-modal text-sm font-bold text-[#0066A1] hover:text-[#003B5C] inline-flex items-center gap-2 group" data-solution="reuso">
+            <span>Ver Especificação Técnica</span>
+            <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Solução 4: Telemetria e Automação IoT -->
+        <div class="tech-card p-8 flex flex-col justify-between animate-on-scroll">
+          <div>
+            <div class="w-14 h-14 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-6 shadow-sm border border-indigo-100">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/>
+              </svg>
+            </div>
+            <span class="text-xs font-bold uppercase tracking-wider text-indigo-600">Indústria 4.0</span>
+            <h3 class="text-xl font-bold text-[#003B5C] mt-1 mb-3">
+              Telemetria e Automação IoT
+            </h3>
+            <p class="text-sm text-[#667085] leading-relaxed mb-6">
+              Monitoramento e controle em tempo real de vazão, pressão, níveis e parâmetros físico-químicos via sensores inteligentes e dashboards em nuvem 24/7.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">Sensores LoRa/4G</span>
+              <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">Painéis Scada Web</span>
+              <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">Alarmes Preditivos</span>
+            </div>
+          </div>
+          <button type="button" class="open-sol-modal text-sm font-bold text-[#0066A1] hover:text-[#003B5C] inline-flex items-center gap-2 group" data-solution="telemetria">
+            <span>Ver Especificação Técnica</span>
+            <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Solução 5: Consultoria, Licenciamento & Outorgas -->
+        <div class="tech-card p-8 flex flex-col justify-between animate-on-scroll md:col-span-2 lg:col-span-2">
+          <div>
+            <div class="w-14 h-14 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center mb-6 shadow-sm border border-amber-100">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+              </svg>
+            </div>
+            <span class="text-xs font-bold uppercase tracking-wider text-amber-600">Segurança Jurídica & Ambiental</span>
+            <h3 class="text-xl font-bold text-[#003B5C] mt-1 mb-3">
+              Consultoria, Licenciamento & Outorgas
+            </h3>
+            <p class="text-sm text-[#667085] leading-relaxed mb-6">
+              Suporte legal e hidrogeológico completo junto aos órgãos reguladores (DAEE, CETESB, ANA, IGAM, INEA). Obtenção e renovação de outorgas de captação superficial e subterrânea, testes de bombeamento e conformidade técnica ambiental.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">Outorga de Direito de Uso</span>
+              <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">Estudos Hidrogeológicos</span>
+              <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">Responsabilidade Técnica CREA</span>
+            </div>
+          </div>
+          <button type="button" class="open-sol-modal text-sm font-bold text-[#0066A1] hover:text-[#003B5C] inline-flex items-center gap-2 group" data-solution="consultoria">
+            <span>Ver Especificação Técnica</span>
+            <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       5. DIFERENCIAL COMPETITIVO (TABELA COMPARATIVA / MERCADO VS. HIDROSOL)
+       ========================================================================= -->
+  <section id="diferenciais" class="py-24 bg-white border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
+        <span class="badge-tech mb-3">Vantagem Competitiva</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-[#003B5C] tracking-tight">
+          Mercado Convencional vs. Hidrosol Engenharia
+        </h2>
+        <p class="mt-4 text-base text-[#667085] leading-relaxed">
+          Entenda por que empresas líderes confiam seus projetos hídricos à nossa metodologia de engenharia orientada a dados e sustentabilidade.
+        </p>
+      </div>
+
+      <!-- Tabela Comparativa Estilizada -->
+      <div class="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden animate-on-scroll">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse comparison-table">
+            <thead>
+              <tr class="bg-[#003B5C] text-white">
+                <th class="py-5 px-6 font-bold text-sm tracking-wider uppercase w-1/4">Critério Técnico</th>
+                <th class="py-5 px-6 font-bold text-sm tracking-wider uppercase text-slate-300 w-3/8">Mercado Convencional</th>
+                <th class="py-5 px-6 font-bold text-sm tracking-wider uppercase text-[#39A9DB] bg-[#002B45] w-3/8 flex-1">
+                  <div class="flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#39A9DB]"></span>
+                    <span>Hidrosol Engenharia</span>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200 text-sm">
+              
+              <!-- Linha 1: Customização -->
+              <tr class="comparison-row transition-colors">
+                <td class="py-5 px-6 font-bold text-[#003B5C]">
+                  <div class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-[#0066A1]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
+                    </svg>
+                    <span>Customização de Projetos</span>
+                  </div>
+                </td>
+                <td class="py-5 px-6 text-[#667085]">
+                  <div class="flex items-start gap-2">
+                    <span class="text-rose-500 font-bold">✕</span>
+                    <span>Soluções genéricas e pacotes fechados que desconsideram as particularidades da água local e variações de demanda.</span>
+                  </div>
+                </td>
+                <td class="py-5 px-6 font-semibold text-[#003B5C] bg-blue-50/40">
+                  <div class="flex items-start gap-2">
+                    <span class="text-emerald-500 font-bold">✓</span>
+                    <span><strong>Dimensionamento técnico sob medida</strong> com base em análises laboratoriais e modelagem hidráulica precisa.</span>
+                  </div>
+                </td>
+              </tr>
+
+              <!-- Linha 2: Automação -->
+              <tr class="comparison-row transition-colors">
+                <td class="py-5 px-6 font-bold text-[#003B5C]">
+                  <div class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-[#0066A1]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                    </svg>
+                    <span>Automação & Controle</span>
+                  </div>
+                </td>
+                <td class="py-5 px-6 text-[#667085]">
+                  <div class="flex items-start gap-2">
+                    <span class="text-rose-500 font-bold">✕</span>
+                    <span>Controle manual e visual, registros em pranchetas e detecção tardia de vazamentos ou falhas de bombas.</span>
+                  </div>
+                </td>
+                <td class="py-5 px-6 font-semibold text-[#003B5C] bg-blue-50/40">
+                  <div class="flex items-start gap-2">
+                    <span class="text-emerald-500 font-bold">✓</span>
+                    <span><strong>Telemetria IoT e dashboards em tempo real</strong> com inteligência analítica e alertas automáticos via WhatsApp/SMS.</span>
+                  </div>
+                </td>
+              </tr>
+
+              <!-- Linha 3: Eficiência -->
+              <tr class="comparison-row transition-colors">
+                <td class="py-5 px-6 font-bold text-[#003B5C]">
+                  <div class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-[#0066A1]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                    </svg>
+                    <span>Eficiência Energética</span>
+                  </div>
+                </td>
+                <td class="py-5 px-6 text-[#667085]">
+                  <div class="flex items-start gap-2">
+                    <span class="text-rose-500 font-bold">✕</span>
+                    <span>Sistemas superdimensionados, partidas diretas de motores e alto consumo de energia elétrica por m³ bombeado.</span>
+                  </div>
+                </td>
+                <td class="py-5 px-6 font-semibold text-[#003B5C] bg-blue-50/40">
+                  <div class="flex items-start gap-2">
+                    <span class="text-emerald-500 font-bold">✓</span>
+                    <span><strong>Inversores de frequência inteligentes</strong> e bombas de alto rendimento, reduzindo drasticamente o consumo de kWh/m³.</span>
+                  </div>
+                </td>
+              </tr>
+
+              <!-- Linha 4: Compromisso ESG -->
+              <tr class="comparison-row transition-colors">
+                <td class="py-5 px-6 font-bold text-[#003B5C]">
+                  <div class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-[#0066A1]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/>
+                    </svg>
+                    <span>Compromisso ESG</span>
+                  </div>
+                </td>
+                <td class="py-5 px-6 text-[#667085]">
+                  <div class="flex items-start gap-2">
+                    <span class="text-rose-500 font-bold">✕</span>
+                    <span>Cumprimento mínimo de exigências legais e descarte linear de efluentes sem visão de reutilização.</span>
+                  </div>
+                </td>
+                <td class="py-5 px-6 font-semibold text-[#003B5C] bg-blue-50/40">
+                  <div class="flex items-start gap-2">
+                    <span class="text-emerald-500 font-bold">✓</span>
+                    <span><strong>Ciclo fechado de reúso sustentável</strong>, valorização do ativo hídrico e alinhamento com metas globais de descarbonização.</span>
+                  </div>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       6. METODOLOGIA DE EXECUÇÃO (PASSO A PASSO TÉCNICO)
+       ========================================================================= -->
+  <section id="metodologia" class="py-24 bg-blueprint relative text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="text-center max-w-3xl mx-auto mb-20 animate-on-scroll">
+        <span class="badge-tech-dark mb-3">Engenharia Estruturada</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+          Metodologia de Execução Hidrosol
+        </h2>
+        <p class="mt-4 text-base text-slate-300 leading-relaxed">
+          Do diagnóstico inicial ao comissionamento e suporte contínuo: rigor técnico, controle de qualidade e zero imprevistos na sua operação.
+        </p>
+      </div>
+
+      <!-- Fluxo da Metodologia em 4 Passos -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+        
+        <!-- Passo 1 -->
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-md relative hover:bg-white/10 transition-all group animate-on-scroll">
+          <div class="w-12 h-12 rounded-xl bg-[#39A9DB]/20 border border-[#39A9DB] text-[#39A9DB] flex items-center justify-center font-extrabold text-lg mb-6 group-hover:scale-110 transition-transform">
+            01
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Diagnóstico & Auditoria</h3>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Mapeamento completo da demanda hídrica, análise físico-química da água bruta, balanço de massas e identificação de pontos de perda e desperdício.
+          </p>
+          <div class="mt-4 pt-4 border-t border-white/10 text-xs font-semibold text-[#39A9DB]">
+            ✓ Relatório Técnico Preliminar
+          </div>
+        </div>
+
+        <!-- Passo 2 -->
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-md relative hover:bg-white/10 transition-all group animate-on-scroll">
+          <div class="w-12 h-12 rounded-xl bg-[#39A9DB]/20 border border-[#39A9DB] text-[#39A9DB] flex items-center justify-center font-extrabold text-lg mb-6 group-hover:scale-110 transition-transform">
+            02
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Projeto Executivo</h3>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Dimensionamento hidráulico, memoriais de cálculo estrutural, simulação computacional de transientes e emissão de ART registrada junto ao CREA.
+          </p>
+          <div class="mt-4 pt-4 border-t border-white/10 text-xs font-semibold text-[#39A9DB]">
+            ✓ Modelagem 3D & Aprovações
+          </div>
+        </div>
+
+        <!-- Passo 3 -->
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-md relative hover:bg-white/10 transition-all group animate-on-scroll">
+          <div class="w-12 h-12 rounded-xl bg-[#39A9DB]/20 border border-[#39A9DB] text-[#39A9DB] flex items-center justify-center font-extrabold text-lg mb-6 group-hover:scale-110 transition-transform">
+            03
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Instalação & Automação</h3>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Montagem de infraestrutura mecânica, tubulações em PEAD/Inox, instalação de painéis elétricos, bombas dosadoras e sensores de telemetria IoT.
+          </p>
+          <div class="mt-4 pt-4 border-t border-white/10 text-xs font-semibold text-[#39A9DB]">
+            ✓ Montagem Especializada Rápida
+          </div>
+        </div>
+
+        <!-- Passo 4 -->
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-md relative hover:bg-white/10 transition-all group animate-on-scroll">
+          <div class="w-12 h-12 rounded-xl bg-[#39A9DB]/20 border border-[#39A9DB] text-[#39A9DB] flex items-center justify-center font-extrabold text-lg mb-6 group-hover:scale-110 transition-transform">
+            04
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Comissionamento & Operação</h3>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Testes hidrostáticos, calibração analítica de sensores, treinamento técnico dos operadores da planta e suporte de operação assistida contínua.
+          </p>
+          <div class="mt-4 pt-4 border-t border-white/10 text-xs font-semibold text-[#39A9DB]">
+            ✓ Garantia Operacional 24/7
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       7. SEGMENTOS ATENDIDOS
+       ========================================================================= -->
+  <section id="segmentos" class="py-24 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
+        <span class="badge-tech mb-3">Atendimento Setorial</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-[#003B5C] tracking-tight">
+          Segmentos Atendidos
+        </h2>
+        <p class="mt-4 text-base text-[#667085] leading-relaxed">
+          Experiência comprovada em cenários de alta complexidade com soluções dedicadas para cada tipo de empreendimento.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Segmento 1: Indústria & Agronegócio -->
+        <div class="tech-card p-8 bg-white flex flex-col justify-between animate-on-scroll">
+          <div>
+            <div class="w-16 h-16 rounded-2xl bg-blue-50 text-[#0066A1] flex items-center justify-center mb-6">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-[#003B5C] mb-3">Indústria & Agronegócio</h3>
+            <p class="text-sm text-[#667085] leading-relaxed mb-6">
+              Tratamento de água para processos industriais, torres de resfriamento, caldeiras de alta pressão, desmineralização e irrigação de alta precisão no campo.
+            </p>
+            <ul class="space-y-2 text-xs font-semibold text-slate-700">
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#0066A1]"></span>
+                Água desmineralizada e abrandamento
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#0066A1]"></span>
+                Recirculação em torres e condensadores
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#0066A1]"></span>
+                Fertirrigação e poços de alta vazão
+              </li>
+            </ul>
+          </div>
+          <div class="mt-8 pt-4 border-t border-slate-100">
+            <a href="#contato" class="text-xs font-bold text-[#0066A1] uppercase tracking-wider hover:underline">
+              Solicitar Estudo Industrial →
+            </a>
+          </div>
+        </div>
+
+        <!-- Segmento 2: Infraestrutura & Setor Público -->
+        <div class="tech-card p-8 bg-white flex flex-col justify-between animate-on-scroll">
+          <div>
+            <div class="w-16 h-16 rounded-2xl bg-sky-50 text-[#39A9DB] flex items-center justify-center mb-6">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-[#003B5C] mb-3">Infraestrutura & Setor Público</h3>
+            <p class="text-sm text-[#667085] leading-relaxed mb-6">
+              Sistemas descentralizados para municípios, loteamentos residenciais, distritos industriais e concessionárias de saneamento básico.
+            </p>
+            <ul class="space-y-2 text-xs font-semibold text-slate-700">
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#39A9DB]"></span>
+                Estações modulares de água potável (ETA)
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#39A9DB]"></span>
+                Redes adutoras e controle de perdas
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#39A9DB]"></span>
+                Projetos e aprovações em agências
+              </li>
+            </ul>
+          </div>
+          <div class="mt-8 pt-4 border-t border-slate-100">
+            <a href="#contato" class="text-xs font-bold text-[#0066A1] uppercase tracking-wider hover:underline">
+              Solicitar Estudo Municipal →
+            </a>
+          </div>
+        </div>
+
+        <!-- Segmento 3: Empreendimentos Corporativos & Condomínios -->
+        <div class="tech-card p-8 bg-white flex flex-col justify-between animate-on-scroll">
+          <div>
+            <div class="w-16 h-16 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-6">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-[#003B5C] mb-3">Corporativo & Condomínios</h3>
+            <p class="text-sm text-[#667085] leading-relaxed mb-6">
+              Gestão hídrica predial inteligente, redução substancial de tarifas de água/esgoto e reaproveitamento de águas pluviais para grandes complexos.
+            </p>
+            <ul class="space-y-2 text-xs font-semibold text-slate-700">
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+                Reaproveitamento de água pluvial e cinza
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+                Autossuficiência com poço artesiano
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+                Telemetria predial e rateio individualizado
+              </li>
+            </ul>
+          </div>
+          <div class="mt-8 pt-4 border-t border-slate-100">
+            <a href="#contato" class="text-xs font-bold text-[#0066A1] uppercase tracking-wider hover:underline">
+              Solicitar Estudo Predial →
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       8. SIMULADOR INTERATIVO DE ECONOMIA HÍDRICA B2B
+       ========================================================================= -->
+  <section class="py-20 bg-gradient-to-b from-white to-slate-50 border-t border-slate-200">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="bg-[#003B5C] text-white rounded-3xl p-8 sm:p-12 shadow-2xl border border-[#39A9DB]/30 relative overflow-hidden">
+        
+        <!-- Elemento de fundo técnico -->
+        <div class="absolute -right-20 -bottom-20 w-80 h-80 rounded-full bg-[#39A9DB]/10 blur-2xl pointer-events-none"></div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+          
+          <div class="lg:col-span-6 space-y-4">
+            <span class="badge-tech-dark">Calculadora de Eficiência</span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-white">
+              Simule o Potencial de Redução na sua Fatura Hídrica
+            </h2>
+            <p class="text-sm text-slate-300">
+              Mova o cursor com base no consumo mensal atual da sua organização e veja a estimativa de economia com as soluções da Hidrosol Engenharia.
+            </p>
+
+            <!-- Controles do Simulador -->
+            <div class="space-y-5 pt-4">
+              <div>
+                <label class="flex justify-between text-xs font-semibold text-slate-200 mb-2">
+                  <span>Fatura Hídrica Mensal Atual:</span>
+                  <span id="calc-fatura-val" class="text-base font-bold text-[#39A9DB]">R$ 35.000</span>
+                </label>
+                <input type="range" id="calc-fatura" min="5000" max="250000" step="5000" value="35000" class="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-[#39A9DB]">
+                <div class="flex justify-between text-[10px] text-slate-400 mt-1">
+                  <span>R$ 5.000/mês</span>
+                  <span>R$ 100.000/mês</span>
+                  <span>R$ 250.000+/mês</span>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-slate-200 mb-1">Setor de Atividade:</label>
+                <select id="calc-segmento" class="w-full bg-[#002B45] border border-slate-600 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-[#39A9DB]">
+                  <option value="industria">Indústria e Manufatura (~40% Redução)</option>
+                  <option value="agro">Agronegócio e Irrigação (~38% Redução)</option>
+                  <option value="publico">Loteamentos & Setor Público (~45% Redução)</option>
+                  <option value="predial">Condomínios & Corporativo (~35% Redução)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Painel de Resultados do Simulador -->
+          <div class="lg:col-span-6 bg-white/10 border border-white/20 backdrop-blur-md rounded-2xl p-6 sm:p-8 text-center">
+            <span class="text-xs uppercase tracking-wider font-semibold text-slate-300">Economia Estimada Projetada</span>
+            
+            <div class="mt-4 mb-2">
+              <span class="text-xs text-slate-300">Economia Mensal Direta:</span>
+              <div id="calc-res-mensal" class="text-3xl sm:text-4xl font-extrabold text-[#39A9DB] font-heading">
+                R$ 14.000
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4 py-4 my-4 border-y border-white/10 text-left">
+              <div>
+                <span class="block text-[11px] text-slate-300">Economia Anual:</span>
+                <span id="calc-res-anual" class="text-base sm:text-lg font-bold text-white">R$ 168.000</span>
+              </div>
+              <div>
+                <span class="block text-[11px] text-slate-300">Água Preservada:</span>
+                <span id="calc-res-perdas" class="text-base sm:text-lg font-bold text-emerald-400">+1.295 m³/mês</span>
+              </div>
+            </div>
+
+            <a href="#contato" class="btn-primary w-full py-3 rounded-xl text-xs uppercase tracking-wider font-bold inline-block">
+              Quero Essa Economia na Minha Empresa
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       9. FORMULÁRIO DE CONVERSÃO / CHAMADA PARA AÇÃO (CTA FINAL)
+       ========================================================================= -->
+  <section id="contato" class="py-24 bg-white relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <!-- Informações e Contatos Oficiais -->
+        <div class="lg:col-span-5 space-y-8 animate-on-scroll">
+          <div>
+            <span class="badge-tech mb-3">Atendimento Técnico Especializado</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-[#003B5C] tracking-tight">
+              Vamos Transformar sua Gestão Hídrica?
+            </h2>
+            <p class="mt-4 text-base text-[#667085] leading-relaxed">
+              Agende uma visita técnica com nossos engenheiros especialistas. Analisamos suas instalações e apresentamos a viabilidade técnica e financeira sem compromisso.
+            </p>
+          </div>
+
+          <!-- Cards de Contato Direto -->
+          <div class="space-y-4">
+            
+            <div class="flex items-center gap-4 p-4 rounded-xl border border-slate-200 hover:border-[#0066A1] transition-colors bg-slate-50/50">
+              <div class="w-12 h-12 rounded-xl bg-blue-100 text-[#0066A1] flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                </svg>
+              </div>
+              <div>
+                <span class="block text-xs font-semibold text-slate-500 uppercase tracking-wider">Telefones Centrais</span>
+                <span class="text-sm font-bold text-[#003B5C]">(11) 4003-8000 / (11) 3456-7890</span>
+                <span class="block text-[11px] text-slate-500">Plantão Técnico & WhatsApp</span>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-4 p-4 rounded-xl border border-slate-200 hover:border-[#0066A1] transition-colors bg-slate-50/50">
+              <div class="w-12 h-12 rounded-xl bg-sky-100 text-[#0066A1] flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+              </div>
+              <div>
+                <span class="block text-xs font-semibold text-slate-500 uppercase tracking-wider">E-mail Institucional</span>
+                <span class="text-sm font-bold text-[#003B5C]">contato@hidrosolengenharia.com.br</span>
+                <span class="block text-[11px] text-slate-500">Resposta em até 2 horas úteis</span>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-4 p-4 rounded-xl border border-slate-200 hover:border-[#0066A1] transition-colors bg-slate-50/50">
+              <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+                </svg>
+              </div>
+              <div>
+                <span class="block text-xs font-semibold text-slate-500 uppercase tracking-wider">Portal Oficial</span>
+                <span class="text-sm font-bold text-[#003B5C]">www.hidrosolengenharia.com.br</span>
+                <span class="block text-[11px] text-slate-500">Atendimento Nacional</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Selo de Garantia Técnica -->
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-[#0066A1] text-white flex items-center justify-center font-bold text-xs flex-shrink-0">
+              CREA
+            </div>
+            <p class="text-xs text-slate-600">
+              Empresa registrada no <strong>Conselho Regional de Engenharia e Agronomia</strong>. Todos os projetos com ART homologada.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Formulário de Conversão Técnico -->
+        <div class="lg:col-span-7 bg-white rounded-3xl p-8 sm:p-10 shadow-2xl border border-slate-200 animate-on-scroll">
+          <div class="mb-6">
+            <h3 class="text-2xl font-bold text-[#003B5C]">Solicitação de Orçamento Técnico</h3>
+            <p class="text-sm text-[#667085] mt-1">Preencha os campos abaixo para direcionamento ao engenheiro responsável pelo seu setor.</p>
+          </div>
+
+          <form id="orcamento-form" class="space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-bold text-[#003B5C] uppercase tracking-wider mb-1">Seu Nome Completo *</label>
+                <input type="text" name="nome" required placeholder="Ex: Eng. Carlos Silveira" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-[#0066A1] focus:ring-2 focus:ring-[#0066A1]/20 outline-none text-sm">
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-[#003B5C] uppercase tracking-wider mb-1">E-mail Corporativo *</label>
+                <input type="email" name="email" required placeholder="carlos@empresa.com.br" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-[#0066A1] focus:ring-2 focus:ring-[#0066A1]/20 outline-none text-sm">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-bold text-[#003B5C] uppercase tracking-wider mb-1">Telefone / WhatsApp *</label>
+                <input type="tel" name="telefone" required placeholder="(11) 98765-4321" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-[#0066A1] focus:ring-2 focus:ring-[#0066A1]/20 outline-none text-sm">
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-[#003B5C] uppercase tracking-wider mb-1">Empresa / Razão Social *</label>
+                <input type="text" name="empresa" required placeholder="Nome da sua empresa" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-[#0066A1] focus:ring-2 focus:ring-[#0066A1]/20 outline-none text-sm">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-bold text-[#003B5C] uppercase tracking-wider mb-1">Segmento</label>
+                <select name="segmento" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-[#0066A1] focus:ring-2 focus:ring-[#0066A1]/20 outline-none text-sm bg-white">
+                  <option value="industria">Indústria / Fabril</option>
+                  <option value="agro">Agronegócio</option>
+                  <option value="publico">Setor Público / Loteamentos</option>
+                  <option value="condominio">Condomínio / Corporativo</option>
+                  <option value="outro">Outro Segmento</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-[#003B5C] uppercase tracking-wider mb-1">Solução Principal de Interesse</label>
+                <select name="solucao" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-[#0066A1] focus:ring-2 focus:ring-[#0066A1]/20 outline-none text-sm bg-white">
+                  <option value="eta-ete">Estação de Tratamento (ETA / ETE)</option>
+                  <option value="adutoras">Sistemas de Abastecimento & Adutoras</option>
+                  <option value="reuso">Gestão & Reúso de Efluentes</option>
+                  <option value="telemetria">Telemetria & Automação IoT</option>
+                  <option value="consultoria">Consultoria, Licenciamento & Outorgas</option>
+                  <option value="completo">Projeto Integral Hídrico</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-[#003B5C] uppercase tracking-wider mb-1">Mensagem / Descreva sua Necessidade Técnica *</label>
+              <textarea name="mensagem" rows="4" required placeholder="Descreva brevemente a vazão pretendida, o desafio atual (custo elevado, descarte de efluente, adequação a normas) ou a demanda do projeto..." class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-[#0066A1] focus:ring-2 focus:ring-[#0066A1]/20 outline-none text-sm"></textarea>
+            </div>
+
+            <div class="flex items-start gap-2 pt-1">
+              <input type="checkbox" id="concordo-termos" required class="mt-1 rounded text-[#0066A1] focus:ring-[#0066A1]">
+              <label for="concordo-termos" class="text-xs text-slate-500">
+                Concordo com o processamento dos meus dados para recebimento de contato técnico da Hidrosol Engenharia, em conformidade com a LGPD.
+              </label>
+            </div>
+
+            <button type="submit" class="btn-primary w-full py-4 rounded-xl font-extrabold uppercase tracking-wider text-sm shadow-lg">
+              Solicitar Análise Técnica Gratuita
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       10. RODAPÉ (FOOTER) INSTITUCIONAL
+       ========================================================================= -->
+  <footer class="bg-[#003B5C] text-white pt-16 pb-12 border-t border-[#39A9DB]/20 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/10">
+        
+        <!-- Coluna Branding & Slogan -->
+        <div class="lg:col-span-4 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-xl overflow-hidden bg-white p-0.5 shadow-md">
+              <img src="logo.png" alt="Hidrosol Engenharia" class="w-full h-full object-contain">
+            </div>
+            <div>
+              <span class="font-heading font-extrabold text-2xl tracking-tight text-white block">HIDROSOL</span>
+              <span class="text-xs tracking-[0.2em] font-semibold text-[#39A9DB] uppercase">Engenharia</span>
+            </div>
+          </div>
+
+          <p class="text-sm text-slate-300 max-w-sm italic">
+            "Água para todos, soluções inteligentes."
+          </p>
+          <p class="text-xs text-slate-400 leading-relaxed max-w-sm">
+            Projetos de alta precisão técnica para preservação ambiental e rentabilidade operacional hídrica.
+          </p>
+
+          <!-- Selos Rápidos de Conformidade -->
+          <div class="flex items-center gap-2 pt-2">
+            <span class="text-[10px] font-bold px-2 py-1 bg-white/10 rounded border border-white/20 text-slate-300">ABNT NBR</span>
+            <span class="text-[10px] font-bold px-2 py-1 bg-white/10 rounded border border-white/20 text-slate-300">CREA-SP</span>
+            <span class="text-[10px] font-bold px-2 py-1 bg-white/10 rounded border border-white/20 text-[#39A9DB]">ISO 9001</span>
+            <span class="text-[10px] font-bold px-2 py-1 bg-white/10 rounded border border-white/20 text-emerald-400">ESG</span>
+          </div>
+        </div>
+
+        <!-- Links Rápidos de Navegação -->
+        <div class="lg:col-span-2 space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-[#39A9DB]">Navegação</h4>
+          <ul class="space-y-2 text-sm text-slate-300">
+            <li><a href="#hero" class="hover:text-white transition-colors">Início</a></li>
+            <li><a href="#solucoes" class="hover:text-white transition-colors">Soluções</a></li>
+            <li><a href="#diferenciais" class="hover:text-white transition-colors">Diferenciais</a></li>
+            <li><a href="#metodologia" class="hover:text-white transition-colors">Metodologia</a></li>
+            <li><a href="#segmentos" class="hover:text-white transition-colors">Segmentos</a></li>
+            <li><a href="#contato" class="hover:text-white transition-colors">Contato</a></li>
+          </ul>
+        </div>
+
+        <!-- Soluções Técnicas -->
+        <div class="lg:col-span-3 space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-[#39A9DB]">Soluções em Engenharia</h4>
+          <ul class="space-y-2 text-sm text-slate-300">
+            <li><a href="#solucoes" class="hover:text-white transition-colors">Estações de Tratamento (ETA/ETE)</a></li>
+            <li><a href="#solucoes" class="hover:text-white transition-colors">Adutoras & Redes de Água</a></li>
+            <li><a href="#solucoes" class="hover:text-white transition-colors">Reúso e Economia Circular</a></li>
+            <li><a href="#solucoes" class="hover:text-white transition-colors">Telemetria & Automação IoT</a></li>
+            <li><a href="#solucoes" class="hover:text-white transition-colors">Licenciamento & Outorgas</a></li>
+          </ul>
+        </div>
+
+        <!-- Informações de Atendimento -->
+        <div class="lg:col-span-3 space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-[#39A9DB]">Atendimento Corporativo</h4>
+          <p class="text-xs text-slate-300">
+            <strong>Central Telefônica:</strong><br>
+            (11) 4003-8000 / (11) 3456-7890
+          </p>
+          <p class="text-xs text-slate-300">
+            <strong>E-mail:</strong><br>
+            contato@hidrosolengenharia.com.br
+          </p>
+          <p class="text-xs text-slate-300">
+            <strong>Website Oficial:</strong><br>
+            www.hidrosolengenharia.com.br
+          </p>
+          <div class="pt-2">
+            <button type="button" class="open-video-btn text-xs text-[#39A9DB] underline hover:text-white">
+              ▶ Assistir ao Vídeo Institucional
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Barra Inferior de Direitos e Termos -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
+        <div>
+          Copyright © 2026 Hidrosol Engenharia. Todos os direitos reservados.
+        </div>
+        <div class="flex items-center gap-6">
+          <a href="#" class="hover:text-white transition-colors">Políticas de Privacidade</a>
+          <a href="#" class="hover:text-white transition-colors">Termos de Uso</a>
+          <a href="#" class="hover:text-white transition-colors">Conformidade Ambiental</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       MODAL: VÍDEO INSTITUCIONAL OFICIAL
+       ========================================================================= -->
+  <div id="video-modal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-[#00263B] border border-[#39A9DB]/40 rounded-2xl max-w-4xl w-full overflow-hidden shadow-2xl relative">
+      <div class="flex items-center justify-between p-4 border-b border-white/10">
+        <div class="flex items-center gap-2">
+          <span class="telemetry-pulse"></span>
+          <span class="text-sm font-bold text-white">Vídeo Institucional — Hidrosol Engenharia</span>
+        </div>
+        <button id="close-video-modal" type="button" class="text-slate-400 hover:text-white text-2xl font-bold p-1 leading-none" aria-label="Fechar Vídeo">&times;</button>
+      </div>
+      <div class="relative bg-black aspect-video flex items-center justify-center">
+        <video id="institutional-video" controls class="w-full h-full object-contain">
+          <source src="video_institucional.mp4" type="video/mp4">
+          <source src="video publicitário.mp4" type="video/mp4">
+          Seu navegador não suporta o elemento de vídeo.
+        </video>
+      </div>
+      <div class="p-4 bg-[#001D2D] text-xs text-slate-300 flex justify-between items-center">
+        <span>"Tecnologia que Flui. Engenharia que Transforma."</span>
+        <a href="#contato" class="btn-primary text-[11px] font-bold px-4 py-2 rounded-full">Solicitar Proposta Técnica</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       MODAL: ESPECIFICAÇÃO TÉCNICA DAS SOLUÇÕES
+       ========================================================================= -->
+  <div id="solution-modal" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-2xl w-full overflow-hidden shadow-2xl border border-slate-200 animate-on-scroll is-visible">
+      <div class="p-6 bg-[#003B5C] text-white flex justify-between items-start">
+        <div>
+          <span class="text-[10px] uppercase font-bold text-[#39A9DB] tracking-widest block mb-1">Memorial Técnico</span>
+          <h3 id="sol-modal-title" class="text-xl font-bold text-white">Título da Solução</h3>
+          <p id="sol-modal-subtitle" class="text-xs text-slate-300 mt-0.5">Subtítulo explicativo</p>
+        </div>
+        <button id="close-sol-modal" type="button" class="text-slate-300 hover:text-white text-3xl font-bold leading-none" aria-label="Fechar Modal">&times;</button>
+      </div>
+      
+      <div class="p-6 space-y-5 max-h-[70vh] overflow-y-auto">
+        <p id="sol-modal-desc" class="text-sm text-slate-600 leading-relaxed">
+          Descrição detalhada da solução de engenharia.
+        </p>
+
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-[#003B5C] mb-3">Parâmetros de Engenharia</h4>
+          <div id="sol-modal-specs" class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <!-- Injetado dinamicamente via JS -->
+          </div>
+        </div>
+      </div>
+
+      <div class="p-4 bg-slate-50 border-t border-slate-200 flex justify-end gap-3">
+        <a href="#contato" class="btn-primary text-xs uppercase tracking-wider font-bold px-5 py-2.5 rounded-xl">
+          Solicitar Estudo para Esta Solução
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       MODAL: SUCESSO DE ENVIO DE ORÇAMENTO
+       ========================================================================= -->
+  <div id="form-feedback-modal" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-md w-full p-8 text-center shadow-2xl border border-slate-200">
+      <div class="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto mb-4">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+        </svg>
+      </div>
+      <h3 class="text-2xl font-bold text-[#003B5C]">Solicitação Recebida!</h3>
+      <p class="text-sm text-[#667085] mt-2 leading-relaxed">
+        Obrigado, <span id="feedback-user-name" class="font-bold text-[#0066A1]">Cliente</span>! Seu pedido foi encaminhado para a equipe de Engenharia de Aplicação da Hidrosol. Um especialista entrará em contato em breve.
+      </p>
+      <div class="mt-6">
+        <button id="close-feedback-btn" type="button" class="btn-primary w-full py-3 rounded-xl text-xs uppercase tracking-wider font-bold">
+          Fechar
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Botão Flutuante de WhatsApp -->
+  <a href="https://wa.me/551140038000?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20t%C3%A9cnico%20com%20a%20Hidrosol%20Engenharia" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-40 bg-emerald-500 hover:bg-emerald-600 text-white p-3.5 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-all group" aria-label="Conversar pelo WhatsApp">
+    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+    </svg>
+    <span class="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs transition-all duration-500 ease-in-out text-xs font-bold pl-0 group-hover:pl-2">
+      Fale com o Engenheiro
+    </span>
+  </a>
+
+  <!-- Botão Voltar ao Topo -->
+  <button id="back-to-top" type="button" class="fixed bottom-6 left-6 z-40 bg-white/90 hover:bg-white text-[#003B5C] border border-slate-200 p-3 rounded-full shadow-lg opacity-0 invisible transition-all hover:scale-105" aria-label="Voltar ao Topo">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 15l7-7 7 7"/>
+    </svg>
+  </button>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
